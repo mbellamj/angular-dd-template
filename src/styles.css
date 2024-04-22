@@ -1,0 +1,250 @@
+/* You can add global styles to this file, and also import other style files */
+:host {
+  --font-family: font-family: Roboto, 'Helvetica Neue', sans-serif;
+  --resize-ratio: 1;
+  --text-color-rgb: 22, 22, 22;
+  --content-color-rgb: 109, 109, 109;
+  --background-color-rgb: 255, 255, 255;
+  --card-background-color-rgb: 248, 250, 253;
+  --border-color-rgb: 231, 234, 243;
+
+  --primary-color-rgb: ;
+  --hover-color-rgb: ;
+  --icon-color-rgb: 0, 120, 212;
+  --success-color-rgb: 12, 196, 108;
+  --dark-success-color-rgb: 16, 124, 16;
+  --error-color-rgb: 249, 78, 31;
+  --warning-color-rgb: ;
+
+  --box-shadow-color-rgb: 100, 100, 111;
+  --box-shadow: rgba(var(--box-shadow-color-rgb), 0.2) 0px 7px 29px 0px;
+  --card-box-shadow-color-rgb: 17, 12, 46;
+  --card-box-shadow: rgba(var(--card-box-shadow-color-rgb), 0.15) 0px 48px 100px 0px;
+
+  --bezier-transition: cubic-bezier(0.57, 0.21, 0.69, 1.25);
+
+  --bright-blue: oklch(51.01% 0.274 263.83);
+  --electric-violet: oklch(53.18% 0.28 296.97);
+  --french-violet: oklch(47.66% 0.246 305.88);
+  --vivid-pink: oklch(69.02% 0.277 332.77);
+  --hot-red: oklch(61.42% 0.238 15.34);
+  --orange-red: oklch(63.32% 0.24 31.68);
+
+  --gray-900: oklch(19.37% 0.006 300.98);
+  --gray-700: oklch(36.98% 0.014 302.71);
+  --gray-400: oklch(70.9% 0.015 304.04);
+
+  --red-to-pink-to-purple-vertical-gradient: linear-gradient(
+    180deg,
+    var(--orange-red) 0%,
+    var(--vivid-pink) 50%,
+    var(--electric-violet) 100%
+  );
+
+  --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
+    90deg,
+    var(--orange-red) 0%,
+    var(--vivid-pink) 50%,
+    var(--electric-violet) 100%
+  );
+
+  --pill-accent: var(--bright-blue);
+
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --resize-ratio: 1;
+  --text-color-rgb: 22, 22, 22;
+  --content-color-rgb: 109, 109, 109;
+  --background-color-rgb: 255, 255, 255;
+  --card-background-color-rgb: 248, 250, 253;
+  --border-color-rgb: 231, 234, 243;
+
+  --primary-color-rgb: ;
+  --hover-color-rgb: ;
+  --icon-color-rgb: 0, 120, 212;
+  --success-color-rgb: 12, 196, 108;
+  --dark-success-color-rgb: 16, 124, 16;
+  --error-color-rgb: 249, 78, 31;
+  --warning-color-rgb: ;
+
+  --bezier-transition: cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+*,
+*::before,
+*::after {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  appearance: none;
+  border: none;
+  color: inherit;
+  text-decoration: none;
+  list-style: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  /* font-size: inherit; */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  max-width: 100vw;
+  /* color: rgb(var(--text-color-rgb));
+  background-color: rgb(var(--background-color-rgb));
+  font-family: var(--font-family);
+  font-size: 1rem;
+  overflow-y: scroll; */
+  height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color-rgb: 255, 255, 255;
+    --content-color-rgb: 245, 245, 245;
+    --background-color-rgb: 11, 17, 32;
+    --card-background-color-rgb: 4, 44, 84;
+  }
+}
+
+@media (prefers-reduce-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+img,
+picture,
+video {
+  max-width: 100%;
+  display: block;
+  overflow: clip;
+  cursor: pointer;
+  border-radius: inherit;
+  transition: inherit;
+}
+
+button {
+  cursor: pointer;
+  background-color: rgba(var(--background-color-rgb));
+  border: 0.02rem solid rgba(var(--border-color-rgb), 0.7);
+  transition: all 0.3s var(--bezier-transition);
+  box-shadow: var(--box-shadow);
+}
+
+button:hover {
+  background-color: rgba(var(--border-color-rgb), 0.7);
+}
+
+.container {
+  --max-width: 100%;
+  --container-padding: 1rem 4%;
+
+  position: relative;
+  padding: var(--container-padding);
+  width: 100%;
+  max-width: var(--max-width);
+  gap: 2rem;
+  margin: 0 auto;
+  transition: all 0.3s var(--bezier-transition);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 480px) {
+  :root {
+    --resize-ratio: 1.15;
+  }
+
+  .container {
+    --container-padding: 1rem 4%;
+  }
+}
+
+@media screen and (min-width: 512px) {
+  :root {
+    --resize-ratio: 1.2;
+  }
+
+  .container {
+    --container-padding: 1rem 5%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  :root {
+    --resize-ratio: 1.25;
+  }
+
+  .container {
+    --container-padding: 1rem 5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --resize-ratio: 1.5;
+  }
+
+  .container {
+    --container-padding: 1.15rem 5%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --resize-ratio: 1.75;
+  }
+
+  .container {
+    --container-padding: 1.3rem 5%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  :root {
+    --resize-ratio: 2;
+  }
+
+  .container {
+    --container-padding: 1.5rem 5%;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  :root {
+    --resize-ratio: 2.25;
+  }
+}

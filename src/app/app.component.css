@@ -1,0 +1,27 @@
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s var(--bezier-transition);
+  z-index: 9999;
+  background-color: rgb(var(--background-color-rgb));
+}
+
+main {
+  grid-area: main;
+  border: 0.2rem solid blueviolet;
+}
+
+footer {
+  grid-area: footer;
+  border: 0.2rem solid blueviolet;
+}
